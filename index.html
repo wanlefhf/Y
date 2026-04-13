@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>杨静宜</title>
+    <title>OO</title>
     <!-- 国内稳定CDN，无加载失败问题 -->
     <script src="https://cdn.bootcdn.net/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
     <script src="https://cdn.bootcdn.net/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
@@ -199,7 +199,7 @@
 <body>
     <div class="container">
         <div class="header">
-            <div class="title">杨静宜</div>
+            <div class="title">OO</div>
             <div class="subtitle">9:14官方比例 | 3600×5600超清 | 固定15MB | 蓝光无水印</div>
         </div>
 
@@ -527,7 +527,7 @@
                     const url = URL.createObjectURL(blob);
                     const a = document.createElement('a');
                     a.href = url;
-                    a.download = `杨静宜_${imgObj.name.replace(/\.[^/.]+$/, '')}.png`;
+                    a.download = `OO_${imgObj.name.replace(/\.[^/.]+$/, '')}.png`;
                     a.click();
                     URL.revokeObjectURL(url);
 
@@ -561,7 +561,7 @@
                     const item = imageList[i];
                     try {
                         const blob = await generateSinglePoster(item.img);
-                        const fileName = `杨静宜_${item.name.replace(/\.[^/.]+$/, '')}.png`;
+                        const fileName = `OO_${item.name.replace(/\.[^/.]+$/, '')}.png`;
                         zip.file(fileName, blob);
                         completed++;
                     } catch (e) {
@@ -575,7 +575,7 @@
                 }
 
                 const zipBlob = await zip.generateAsync({ type: 'blob' });
-                saveAs(zipBlob, `杨静宜_批量海报_${Date.now()}.zip`);
+                saveAs(zipBlob, `OO_批量海报_${Date.now()}.zip`);
 
                 progressWrap.style.display = 'none';
                 statusText.innerText = `🎉 批量生成完成！共${total}张海报，已自动下载ZIP包`;
